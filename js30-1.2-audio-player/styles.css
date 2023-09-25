@@ -1,0 +1,118 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: dimgray;
+    color: whitesmoke;
+    font-weight: bold;
+}
+a{
+    color:blanchedalmond;
+}
+a:hover{
+    color:burlywood;
+}
+a:visited{
+    color:darksalmon;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+    padding-bottom: 0;
+}
+main{
+    margin:0;
+    padding: 0;
+}
+.player{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ width: 100%;
+ height: 100%;
+ margin: 0 auto;
+ background-color: darkslategrey;
+ padding: 5%;
+}
+.control-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.songs{
+width: 600px;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+margin: 0 auto;
+padding-top: 20%;
+}
+.song1{
+background-image: url(Assets/Images/desert.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+}
+.song2{
+background-image: url(Assets/Images/daemon.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+}
+.song3{
+    background-image: url(Assets/Images/norway.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.songname{
+    font-size: 20px;
+    text-align: center;
+}
+.off{
+    display: none;
+}
+.button-style {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgb(85, 156, 255);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .button-style:hover {
+    background-color: rgba(85, 156, 255);
+  }
+  
+  .button-style:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  .button{
+    padding: 2%;
+  }
+  footer{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 1%;
+  }
+  .footer-item{
+    margin: 2%;
+    padding: 5%;
+  }
