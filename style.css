@@ -33,10 +33,10 @@ h2, p {
     font-style: italic;
 }
 .invisible {
-    display: none;
+    visibility: hidden;;
 }
 .player.invisible{
-    display: none;
+display: none;
 }
 .container{
     width: 100%;
@@ -167,16 +167,21 @@ h2, p {
         cursor: pointer;
     }
 
-.control-item:active{
-    filter: drop-shadow(0 0 5px #3e3434);
-    cursor: pointer;
-}
+
   .control-item > .left{
     border: 20px solid transparent; border-right: 20px solid #960505;
+    }
+    .control-item > .left:active{
+        filter: drop-shadow(0 0 15px #f04747);
+        cursor: pointer;
     }
   .control-item > .right{
     border: 20px solid transparent; border-left: 20px solid #960505;
   }
+  .control-item > .right:hover{
+    filter: drop-shadow(0 0 15px #f04747);
+    cursor: pointer;
+}
 .col{
     width: 8px;
     height: 40px;
@@ -195,6 +200,12 @@ h2, p {
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
+    transition: all ease-in .5s;
+}
+.pause:hover>.col {
+    background-color: #f33939;
+    filter: drop-shadow(0 0 15px #f04747);
+    cursor: pointer;
 }
 .pause>.col:first-child{
     margin-right: 5px;
@@ -207,4 +218,11 @@ h2, p {
 .play{
     margin-left: 20px;
     border: 20px solid transparent; border-left: 30px solid #960505;
+    transition: all ease-in .5s;
 }
+.play:hover{
+    border-left: 30px solid #f33939;
+    filter: drop-shadow(0 0 15px #f04747);
+    cursor: pointer;
+}
+
