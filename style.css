@@ -18,10 +18,11 @@ a:hover{
     color: #e03d3d;
 }
 footer{
-    width: 70%;
+    width: 80%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding: 5% 10%;
 }
 h1{
@@ -200,7 +201,7 @@ display: none;
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
-    transition: all ease-in .5s;
+    transition: all ease-in .2s;
 }
 .pause:hover>.col {
     background-color: #f33939;
@@ -218,7 +219,7 @@ display: none;
 .play{
     margin-left: 20px;
     border: 20px solid transparent; border-left: 30px solid #960505;
-    transition: all ease-in .5s;
+    transition: all ease-in .2s;
 }
 .play:hover{
     border-left: 30px solid #f33939;
@@ -226,3 +227,9 @@ display: none;
     cursor: pointer;
 }
 
+.footer-section{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
