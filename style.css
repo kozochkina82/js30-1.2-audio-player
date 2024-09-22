@@ -179,7 +179,7 @@ display: none;
     }
    .right {
     border: 20px solid transparent; border-left: 20px solid #960505;
- 
+
     }
   .control-item > .right:hover{
     filter: drop-shadow(0 0 15px #f04747);
@@ -187,9 +187,10 @@ display: none;
 }
 
 button {
-    margin-left: 40px;
+    margin-left: 50px;
     border: 20px solid transparent; border-left: 30px solid #960505;
     background-color: transparent;
+    margin-right: 10px;
 
 }
 button:hover{
@@ -205,6 +206,7 @@ button:hover{
     border-left: 15px solid #960505;
     background-color: #960505;
     margin-right: 40px;
+    margin-left: 40px;
 }
 
 
