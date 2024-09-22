@@ -36,7 +36,7 @@ h2, p {
 .invisible {
     visibility: hidden;;
 }
-.player.invisible{
+.player.invisible, .pause.invisible, .play.invisible{
 display: none;
 }
 .container{
@@ -84,7 +84,7 @@ display: none;
     overflow: hidden;
 }
 .controls{
-    width: 80%;
+    width: 60%;
     height: 30%;
     background-color: #695e5e;
     border-radius: 20px;
@@ -168,7 +168,6 @@ display: none;
         cursor: pointer;
     }
 
-
   .control-item > .left{
     border: 20px solid transparent; border-right: 20px solid #960505;
     }
@@ -176,56 +175,37 @@ display: none;
         filter: drop-shadow(0 0 15px #f04747);
         cursor: pointer;
     }
-  .control-item > .right{
+   .right {
     border: 20px solid transparent; border-left: 20px solid #960505;
-  }
+ 
+    }
   .control-item > .right:hover{
     filter: drop-shadow(0 0 15px #f04747);
     cursor: pointer;
 }
-.col{
-    width: 8px;
-    height: 40px;
-    background-color: #960505;
+
+button {
+    margin-left: 40px;
+    border: 20px solid transparent; border-left: 30px solid #960505;
+    background-color: transparent;
+
 }
-.control-item > .col.left-col{
-    margin-right:-20px;
-}
-.control-item > .col.right-col{
-    margin-left:-20px;
+button:hover{
+  
+    filter: drop-shadow(0 0 15px #f04747);
+    cursor: pointer;
 }
 
 .pause{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px;
-    transition: all ease-in .2s;
+    border-top: 20px solid #960505;
+    border-bottom: 20px solid #960505;
+    border-right: 15px solid #960505;
+    border-left: 15px solid #960505;
+    background-color: #960505;
+    margin-right: 40px;
 }
-.pause:hover>.col {
-    background-color: #f33939;
-    filter: drop-shadow(0 0 15px #f04747);
-    cursor: pointer;
-}
-.pause>.col:first-child{
-    margin-right: 5px;
-    width: 10px;
-}
-.pause>.col:last-child{
-    margin-left: 5px;
-    width: 10px;
-}
-.play{
-    margin-left: 20px;
-    border: 20px solid transparent; border-left: 30px solid #960505;
-    transition: all ease-in .2s;
-}
-.play:hover{
-    border-left: 30px solid #f33939;
-    filter: drop-shadow(0 0 15px #f04747);
-    cursor: pointer;
-}
+
+
 
 .footer-section{
     width: 50%;

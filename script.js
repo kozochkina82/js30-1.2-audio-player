@@ -1,3 +1,6 @@
+
+
+
 /* 1 экран */
 const firstRight = document.querySelector('.first-right');
 firstRight.addEventListener('click', changeScreenOneRight);
@@ -41,63 +44,78 @@ function changeScreenThreeLeft(){
     document.querySelector('.screen-3').classList.add('invisible');
     document.querySelector('.screen-2').classList.remove('invisible');
 }
+
 /*Song 1*/
+const button1 = document.querySelector('.button1');
+function playStop1() {
+  button1.classList.toggle('pause');
+}
+button1.addEventListener('click', playStop1);
+
+
 const audio1 = document.querySelector('.audio1');
-const playBtn1 = document.querySelector('.play-first');
-const pauseBtn1 = document.querySelector('.pause-first');
-function playAudio1() {
+let isPlaying1 = false;
+function playAudio1toggle1() {
     audio1.currentTime = 0;
-    audio1.play();
-  }
-  function pauseAudio1() {
-    audio1.pause();
-  }
-  
-  playBtn1.addEventListener('click', playAudio1);
-  pauseBtn1.addEventListener('click', pauseAudio1);
-  firstRight.addEventListener('click', pauseAudio1);
-  firstLeft.addEventListener('click', pauseAudio1);
-  firstRight.addEventListener('click', playAudio2);
-  firstLeft.addEventListener('click', playAudio3);
+    isPlaying1 ? audio1.pause() : audio1.play();
+}
+audio1.onplaying = function() {
+  isPlaying1 = true;
+};
+audio1.onpause = function() {
+  isPlaying1 = false;
+};
+button1.addEventListener('click', playAudio1toggle1);
+
+  //firstRight.addEventListener('click', pauseAudio1);
+  //firstLeft.addEventListener('click', pauseAudio1);
+  //firstRight.addEventListener('click', playAudio2);
+  //firstLeft.addEventListener('click', playAudio3);
 
 /*Song 2 */
-const audio2 = document.querySelector('.audio2');
-const playBtn2 = document.querySelector('.play-second');
-const pauseBtn2 = document.querySelector('.pause-second');
-function playAudio2() {
-    audio2.currentTime = 0;
-    audio2.play();
-  }
 
-  function pauseAudio2() {
-    audio2.pause();
+const button2 = document.querySelector('.button2');
+function playStop2() {
+  button2.classList.toggle('pause');
 }
-  playBtn2.addEventListener('click', playAudio2);
-  pauseBtn2.addEventListener('click', pauseAudio2);
-  secondRight.addEventListener('click', pauseAudio2);
-  secondLeft.addEventListener('click', pauseAudio2);
-  secondRight.addEventListener('click', playAudio3);
-  secondLeft.addEventListener('click', playAudio1);
-  
+button2.addEventListener('click', playStop2);
 
+const audio2 = document.querySelector('.audio2');
+let isPlaying2 = false;
+function playAudio1toggle2() {
+    audio1.currentTime = 0;
+    isPlaying2 ? audio2.pause() : audio2.play();
+}
+audio2.onplaying = function() {
+  isPlaying2 = true;
+};
+audio2.onpause = function() {
+  isPlaying2 = false;
+};
+button2.addEventListener('click', playAudio1toggle2);
+
+ 
   /* Song 3 */
 
-const audio3 = document.querySelector('.audio3');
-const playBtn3 = document.querySelector('.play-third');
-const pauseBtn3 = document.querySelector('.pause-third');
-function playAudio3() {
-    audio3.currentTime = 0;
-    audio3.play();
+  const button3 = document.querySelector('.button3');
+  function playStop3() {
+    button3.classList.toggle('pause');
   }
+  button3.addEventListener('click', playStop3);
   
-  function pauseAudio3() {
-    audio3.pause();
+  const audio3 = document.querySelector('.audio3');
+  let isPlaying3 = false;
+  function playAudio1toggle3() {
+      audio3.currentTime = 0;
+      isPlaying3 ? audio3.pause() : audio3.play();
   }
+  audio3.onplaying = function() {
+    isPlaying3 = true;
+  };
+  audio3.onpause = function() {
+    isPlaying3 = false;
+  };
+  button3.addEventListener('click', playAudio1toggle3);
   
-  playBtn3.addEventListener('click', playAudio3);
-  pauseBtn3.addEventListener('click', pauseAudio3);
-thirdRight.addEventListener('click', pauseAudio3,);
-thirdLeft.addEventListener('click', pauseAudio3);
-thirdRight.addEventListener('click', playAudio1,);
-thirdLeft.addEventListener('click', playAudio2);
   
+ 
