@@ -67,10 +67,21 @@ audio1.onpause = function() {
 };
 button1.addEventListener('click', playAudio1toggle1);
 
-  //firstRight.addEventListener('click', pauseAudio1);
-  //firstLeft.addEventListener('click', pauseAudio1);
-  //firstRight.addEventListener('click', playAudio2);
-  //firstLeft.addEventListener('click', playAudio3);
+function playAudio1() {
+    audio1.currentTime = 0;
+    audio1.play();
+    button1.classList.add('pause')
+  }
+  function pauseAudio1() {
+    audio1.pause();
+  }
+  
+  firstRight.addEventListener('click', pauseAudio1);
+  firstLeft.addEventListener('click', pauseAudio1);
+  firstRight.addEventListener('click', playAudio2);
+  firstLeft.addEventListener('click', playAudio3);
+
+
 
 /*Song 2 */
 
@@ -94,6 +105,19 @@ audio2.onpause = function() {
 };
 button2.addEventListener('click', playAudio1toggle2);
 
+function playAudio2() {
+  audio2.currentTime = 0;
+  audio2.play();
+  button2.classList.add('pause')
+}
+function pauseAudio2() {
+  audio2.pause();
+}
+
+secondRight.addEventListener('click', pauseAudio2);
+secondLeft.addEventListener('click', pauseAudio2);
+secondRight.addEventListener('click', playAudio3);
+secondLeft.addEventListener('click', playAudio1);
  
   /* Song 3 */
 
@@ -117,5 +141,17 @@ button2.addEventListener('click', playAudio1toggle2);
   };
   button3.addEventListener('click', playAudio1toggle3);
   
+  function playAudio3() {
+    audio3.currentTime = 0;
+    audio3.play();
+    button3.classList.add('pause')
+  }
+  function pauseAudio3() {
+    audio3.pause();
+  }
   
+  thirdRight.addEventListener('click', pauseAudio3);
+  thirdLeft.addEventListener('click', pauseAudio3);
+  thirdRight.addEventListener('click', playAudio1);
+thirdLeft.addEventListener('click', playAudio2);
  
