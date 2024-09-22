@@ -52,6 +52,9 @@ function playStop1() {
 }
 button1.addEventListener('click', playStop1);
 
+// progressEl1 
+const progressEl1 = document.querySelector('#input1');
+let mouseDownOnSlider1 = false;
 
 const audio1 = document.querySelector('.audio1');
 let isPlaying1 = false;
@@ -66,6 +69,25 @@ audio1.onpause = function() {
   isPlaying1 = false;
 };
 button1.addEventListener('click', playAudio1toggle1);
+/*progress bar*/
+audio1.addEventListener('loadeddata', () => {
+  progressEl1.value = 0;
+});
+audio1.addEventListener('timeupdate', () => {
+  if (!mouseDownOnSlider1) {
+    progressEl1.value = audio1.currentTime / audio1.duration * 100;
+  }
+});
+progressEl1.addEventListener('change', () => {
+  const pct1 = progressEl1.value / 100;
+  audio1.currentTime = (audio1.duration || 0) * pct1;
+});
+progressEl1.addEventListener('mousedown', () => {
+  mouseDownOnSlider1 = true;
+});
+progressEl1.addEventListener('mouseup', () => {
+  mouseDownOnSlider1 = false;
+});
 
 function playAudio1() {
     audio1.currentTime = 0;
@@ -91,10 +113,13 @@ function playStop2() {
 }
 button2.addEventListener('click', playStop2);
 
+const progressEl2 = document.querySelector('#input2');
+let mouseDownOnSlider2 = false;
+
 const audio2 = document.querySelector('.audio2');
 let isPlaying2 = false;
 function playAudio1toggle2() {
-    audio1.currentTime = 0;
+    audio2.currentTime = 0;
     isPlaying2 ? audio2.pause() : audio2.play();
 }
 audio2.onplaying = function() {
@@ -104,6 +129,26 @@ audio2.onpause = function() {
   isPlaying2 = false;
 };
 button2.addEventListener('click', playAudio1toggle2);
+
+/*progress bar*/
+audio2.addEventListener('loadeddata', () => {
+  progressEl2.value = 0;
+});
+audio2.addEventListener('timeupdate', () => {
+  if (!mouseDownOnSlider2) {
+    progressEl2.value = audio2.currentTime / audio2.duration * 100;
+  }
+});
+progressEl2.addEventListener('change', () => {
+  const pct2 = progressEl2.value / 100;
+  audio2.currentTime = (audio2.duration || 0) * pct2;
+});
+progressEl2.addEventListener('mousedown', () => {
+  mouseDownOnSlider2 = true;
+});
+progressEl2.addEventListener('mouseup', () => {
+  mouseDownOnSlider2 = false;
+});
 
 function playAudio2() {
   audio2.currentTime = 0;
@@ -126,6 +171,9 @@ secondLeft.addEventListener('click', playAudio1);
     button3.classList.toggle('pause');
   }
   button3.addEventListener('click', playStop3);
+
+  const progressEl3 = document.querySelector('#input3');
+  let mouseDownOnSlider3 = false; 
   
   const audio3 = document.querySelector('.audio3');
   let isPlaying3 = false;
@@ -140,6 +188,26 @@ secondLeft.addEventListener('click', playAudio1);
     isPlaying3 = false;
   };
   button3.addEventListener('click', playAudio1toggle3);
+
+  /*progress bar*/
+audio3.addEventListener('loadeddata', () => {
+  progressEl3.value = 0;
+});
+audio3.addEventListener('timeupdate', () => {
+  if (!mouseDownOnSlider3) {
+    progressEl3.value = audio3.currentTime / audio3.duration * 100;
+  }
+});
+progressEl3.addEventListener('change', () => {
+  const pct3 = progressEl3.value / 100;
+  audio3.currentTime = (audio3.duration || 0) * pct3;
+});
+progressEl3.addEventListener('mousedown', () => {
+  mouseDownOnSlider3 = true;
+});
+progressEl3.addEventListener('mouseup', () => {
+  mouseDownOnSlider3 = false;
+});
   
   function playAudio3() {
     audio3.currentTime = 0;
