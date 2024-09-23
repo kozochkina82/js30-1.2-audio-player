@@ -152,13 +152,15 @@ display: none;
     border: 1px solid #302c2c;
     box-shadow: inset 0 -1px 1px rgba(24, 23, 23, 0.3);
 	padding: 30px;
-    margin: 0;
+    margin: 0 auto;
+
   }
 .control-item{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .control-item:hover{
@@ -172,14 +174,14 @@ display: none;
 
   .control-item > .left{
     border: 20px solid transparent; border-right: 20px solid #960505;
+    margin-left: -10px;
     }
     .control-item > .left:hover{
         filter: drop-shadow(0 0 15px #f04747);
         cursor: pointer;
     }
-   .right {
+   .control-item > .right {
     border: 20px solid transparent; border-left: 20px solid #960505;
-
     }
   .control-item > .right:hover{
     filter: drop-shadow(0 0 15px #f04747);
@@ -191,7 +193,6 @@ button {
     border: 20px solid transparent; border-left: 30px solid #960505;
     background-color: transparent;
     margin-right: 10px;
-
 }
 button:hover{
   
@@ -270,121 +271,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 
   }
 
-  @media(max-width: 460px){
-    
-    body{
-        max-width: 460px;
-           }
-     footer{
-        width: 100%;
-        padding: 5% 10%;
-    }
-
-.footer-section{
-width: 100%;
-flex-direction: column;
-justify-content: flex-start;
-}
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #302c2c;
-
-}
-.player-field{
-    width: 40%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
  
-}
-.player{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 5%;
-    margin: 5px auto;
-    width: 150px;
-    height: 250px;
-    border: 6px solid #695e5e;
-    box-shadow: 0px 5px 8px 2px rgba(36, 29, 9, 0.56);
-}
-.screen-1{
-    background: url("Assets/Img/img1.jpg") top left/50% 50% no-repeat cover;
-    border-radius: 10%;
-    overflow: hidden;
-}
-.screen-2{
-    background: url("Assets/Img/img2.jpg") top left/100% 100% no-repeat cover;
-    border-radius: 10%;
-    overflow: hidden;
-}
-.screen-3{
-    background: url("Assets/Img/img3.jpg") top left/100% 100% no-repeat cover;
-    border-radius: 10%;
-    overflow: hidden;
-}
-
-.control-buttons{
-    width: 80%;
-	height: 50%;
-	padding: 10px;
-    margin: 5% auto auto;
-  }
-  .control-buttons-container{
-    width: 100%;
-	height: 50%;
-	padding: 30px;
-    margin: 0;
- 
-  }
-  .control-item > .left{
-    border: 15px solid transparent; border-right: 20px solid #960505;
-    margin-left: -30px;
-    }
-    .control-item > .left:hover{
-        filter: drop-shadow(0 0 15px #f04747);
-        cursor: pointer;
-    }
-   .right {
-    border: 15px solid transparent; border-left: 20px solid #960505;
-    margin-right: 15px;
- 
-    }
-  .control-item > .right:hover{
-    filter: drop-shadow(0 0 15px #f04747);
-    cursor: pointer;
-}
-
-button {
-    margin-left: 40px;
-    margin-right: 5px;
-    border: 15px solid transparent; border-left: 25px solid #960505;
-    background-color: transparent;
-
-}
-button:hover{
-  
-    filter: drop-shadow(0 0 15px #f04747);
-    cursor: pointer;
-}
-
-.pause{
-    border-top: 15px solid #960505;
-    border-bottom: 15px solid #960505;
-    border-right: 10px solid #960505;
-    border-left: 10px solid #960505;
-    background-color: #960505;
-    margin-right: 30px;
-    margin-left: 30px;
-}
-  }
-
   @media(max-width: 600px){
     
     body{
@@ -392,11 +279,7 @@ button:hover{
            }
      footer{
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 5% 10%;
+             padding: 5% 10%;
     }
 
 .footer-section{
@@ -413,17 +296,10 @@ width: 70%;
 }
 .player-field{
     width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- 
+
 }
 .player{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
     padding-bottom: 5%;
     margin: 5% auto;
     width: 400px;
@@ -468,7 +344,7 @@ width: 70%;
         filter: drop-shadow(0 0 15px #f04747);
         cursor: pointer;
     }
-   .right {
+    .control-item > .right {
     border: 15px solid transparent; border-left: 20px solid #960505;
     margin-right: 15px;
  
@@ -492,12 +368,117 @@ button:hover{
 }
 
 .pause{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+  }
+
+  @media(max-width: 400px){
+    
+    body{
+        max-width: 400px;
+           }
+     footer{
+        width: 100%;
+             padding: 5% 10%;
+    }
+
+.footer-section{
+width: 70%;
+
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #302c2c;
+
+}
+.player-field{
+    width: 100%;
+
+}
+.player{
+    display: flex;
+    padding-bottom: 5%;
+    margin: 5% auto;
+    width: 250px;
+    height: 300px;
+    border: 6px solid #695e5e;
+    box-shadow: 0px 5px 8px 2px rgba(36, 29, 9, 0.56);
+}
+.screen-1{
+    background: url("Assets/Img/img1.jpg") top left/100% 100% no-repeat cover;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.screen-2{
+    background: url("Assets/Img/img2.jpg") top left/100% 100% no-repeat cover;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.screen-3{
+    background: url("Assets/Img/img3.jpg") top left/100% 100% no-repeat cover;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.control-buttons{
+    width: 100%;
+	height: 50%;
+	padding: 5px;
+    margin: 5% auto auto;
+  }
+  .control-buttons-container{
+    width: 100%;
+	height: 50%;
+	padding: 15px;
+    margin: 0;
+ 
+  }
+  .control-item > .left{
+    border: 15px solid transparent; border-right: 20px solid #960505;
+    margin-left: -25px;
+    }
+    .control-item > .left:hover{
+        filter: drop-shadow(0 0 15px #f04747);
+        cursor: pointer;
+    }
+   .control-item > .right {
+    border: 15px solid transparent; border-left: 20px solid #960505;
+    margin-left: -50px;
+ 
+    }
+  .control-item > .right:hover{
+    filter: drop-shadow(0 0 15px #f04747);
+    cursor: pointer;
+}
+
+button {
+    margin-left: 35px;
+    margin-right: 45px;
+    border: 15px solid transparent; border-left: 25px solid #960505;
+    background-color: transparent;
+
+}
+button:hover{
+     filter: drop-shadow(0 0 15px #f04747);
+    cursor: pointer;
+}
+
+.pause{
     border-top: 15px solid #960505;
     border-bottom: 15px solid #960505;
     border-right: 10px solid #960505;
     border-left: 10px solid #960505;
     background-color: #960505;
-    margin-right: 30px;
-    margin-left: 30px;
-}
+    margin-right:75px;
+    margin-left: 25px;
+  }
   }
