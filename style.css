@@ -116,7 +116,11 @@ display: none;
     position: relative;
     overflow: hidden;
   }
-  
+  .time{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
   @keyframes move {
     0% {
       background-position: 0 0;
