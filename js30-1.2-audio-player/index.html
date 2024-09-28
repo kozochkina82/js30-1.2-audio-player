@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Audio-player</title>
+</head>
+<body>
+ <div class="container">
+  <header></header>
+  <main>
+    <div class="player">
+      <div class="songs song1">
+        <div class="control-panel">
+         <audio controls="controls" class="audio">
+            <source src="Assets/Music/Sting_-_Desert_rose_575280.mp3" />
+         </audio>   
+        </div>
+        <div class="songname">
+            <p class="name">Sting "Desert Rose"</p>
+        </div>
+      </div>
+        <div class="songs song2 off">
+            <div class="control-panel">
+             <audio controls="controls" class="audio">
+                <source src="Assets/Music/Moonspell_-_Scorpion_Flower_64808540.mp3" />
+            </audio>   
+            </div>
+            <div class="songname">
+                <p class="name">Moonspell "Scorpion Flower"</p>
+            </div>
+        </div>
+        <div class="songs song3 off">
+            <div class="control-panel">
+             <audio controls="controls" class="audio">
+                <source src="Assets/Music/Myrkur_-_Ulvinde_48605974.mp3" />
+            </audio>   
+            </div>
+            <div class="songname">
+                <p class="name">Myrkur "Ulvinde"</p>
+            </div>
+        </div>
+        <div class="button">
+        <button class="button-style prev" type="button" id="submit" onclick = "previousSong()">Prev</button>
+        <button class="button-style next" type="button" id="submit" onclick = "nextSong()">Next</button>
+        </div>
+    </div>
+    
+  </main>
+  <footer>
+    <div class="footer-item">2023</div> 
+    <div class="footer-item"><a href="https://github.com/kozochkina82">kozochkina82</a> </div>
+    <div class="footer-item"><a href="https://rs.school/js-stage0/"><img src="Assets/Images/rs_school_js.svg" alt="icon" width="50"></a></div>
+    
+  </footer>
+ </div>
+ <script src="index.js"></script>
+</body>
+</html>

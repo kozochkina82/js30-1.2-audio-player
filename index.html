@@ -18,36 +18,37 @@
          <p>Desert Rose</p>
            <div class="controls">         
               <div class="progressbar">
-                <span style="width: 30%"></span>
+                <input id="input1" type="range" value="0" min="0" max="100" step="1">
               </div>
+              <div class="time"> <span class="current-time1">00:00</span> / <span class="total-time1">00:00</span></div>
               <div class="control-buttons">
                 <div class="control-buttons-container">
-                 <div class="control-item first-left"><div class="col left-col"></div><div class="left "></div></div>
-                 <div class="control-item"><div class="play play-first"></div></div>
-                 <div class="control-item"><div class="pause pause-first"><div class="col"></div><div class="col"></div></div></div>
-                 <div class="control-item first-right"><div class="right"></div><div class="col right-col"></div></div>
+                 <div class="control-item first-left"><div class="left"></div></div>
+                 <div class="control-item"><button class="button1 play-first pause-first"></button>
+                </div>
+                 <div class="control-item first-right"><div class="right"></div></div>
                 </div>
               </div>
            </div>     
            <audio class="audio1 invisible" controls >
-            <source src="Assets/Audio/Sting – Desert Rose.mp3" type="audio/mpeg" id="song-1">
+            <source src="Assets/Audio/Sting – Desert Rose.mp3" type="audio/mpeg" id="song-1" >
           </audio>    
         </div>
         <div class="player screen-2 invisible">
           <h2>Powerwolf</h2>
           <p>Demons Are a Girl's Best Friends</p>
             <div class="controls">         
-               <div class="progressbar">
-                 <span style="width: 30%"></span>
-               </div>
+              <div class="progressbar">
+                <input id="input2" type="range" value="0" min="0" max="100" step="1">
+              </div>
+              <div class="time"> <span class="current-time1">00:00</span> / <span class="total-time1">00:00</span></div>
                <div class="control-buttons">
-                 <div class="control-buttons-container">
-                  <div class="control-item second-left"><div class="col left-col"></div><div class="left "></div></div>
-                  <div class="control-item"><div class="play play-second"></div></div>
-                  <div class="control-item"><div class="pause pause-second"><div class="col"></div><div class="col"></div></div></div>
-                  <div class="control-item second-right"><div class="right"></div><div class="col right-col"></div></div>
-                 </div>
-               </div>
+                <div class="control-buttons-container">
+                 <div class="control-item second-left"><div class="left"></div></div>
+                 <div class="control-item"><button class="button2 play-second pause-second"></button></div>
+                 <div class="control-item second-right"><div class="right"></div></div>
+                </div>
+              </div>
             </div>     
             <audio class="audio2 invisible" controls >
              <source src="Assets/Audio/Powerwolf - Demons Are a Girl's Best Friend.mp3" type="audio/mpeg" id="song-2">
@@ -57,17 +58,17 @@
           <h2>Myrkur</h2>
           <p>Ulvinde</p>
             <div class="controls">         
-               <div class="progressbar">
-                 <span style="width: 30%"></span>
-               </div>
+              <div class="progressbar ">
+                <input id="input3" type="range" value="0" min="0" max="100" step="1" >
+              </div>
+              <div class="time"> <span class="current-time1">00:00</span> / <span class="total-time1">00:00</span></div>
                <div class="control-buttons">
-                 <div class="control-buttons-container">
-                  <div class="control-item third-left"><div class="col left-col"></div><div class="left "></div></div>
-                  <div class="control-item"><div class="play play-third"></div></div>
-                  <div class="control-item"><div class="pause pause-third"><div class="col"></div><div class="col"></div></div></div>
-                  <div class="control-item third-right"><div class="right"></div><div class="col right-col"></div></div>
-                 </div>
-               </div>
+                <div class="control-buttons-container">
+                 <div class="control-item third-left"><div class="left"></div></div>
+                 <div class="control-item"><button class=" button3 play-third pause-third"></button></div>
+                 <div class="control-item third-right"><div class="right"></div></div>
+                </div>
+              </div>
             </div>     
             <audio class="audio3 invisible" controls >
              <source src="Assets/Audio/Myrkur - Ulvinde.mp3" type="audio/mpeg" id="song-3">
@@ -76,12 +77,15 @@
 
        </section>
     </main>
-    <footer>
-        <div><p>2024</p></div>
-        <div><p><a href="https://rs.school/courses/javascript-preschool-ru"><img src="Assets/Img/rss-logo.svg" alt="rss-logo" width="30"></a></p></div>
-        <div><p>Thanks for watching! Have a nice day! :D</p></div>
-        <div><p><a href="">© kozochkina82</a></p></div>
-        
+    <footer>        
+        <div class="footer-section">
+          <div><p>Thanks for watching! Have a nice day! :D</p></div>
+        </div>
+        <div class="footer-section">
+          <div><p>2024</p></div>
+          <div><p><a href="https://github.com/kozochkina82">© kozochkina82</a></p></div>
+          <div><p><a href="https://rs.school/courses/javascript-preschool-ru"><img src="Assets/Img/rss-logo.svg" alt="rss-logo" width="30"></a></p></div>        
+          </div>
     </footer>
     </div>
     <script src="script.js"></script>
